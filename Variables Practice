@@ -1,0 +1,6 @@
+name = "Amitha"
+favoriteColor = "blue"
+favoriteFood = "rice pudding"
+luckyNumber = "17"
+
+print(f"My name is {name}, my favorite color is {favoriteColor}, my favorite food is {favoriteFood}, and my lucky number is {luckyNumber}.")
