@@ -1,0 +1,34 @@
+#Once upon a time, there was a person named NAME. NAME lived in a dystopian world named PLACENAME, in a country called
+#COUNTRY. One day, NAME was growing hungry, but he had to save his government-issued FOOD rations to have a small
+#celebration with his family: his RELATION had finally VERB a man named SPOUSE. While NAME and his family were
+#part of the country's lower class, SPOUSE was one class above them, which would grant RELATION a better life. NAME
+#was happy for RELATION, but he swallowed back a(n) EMOTION sob as he thought of his RELATION growing PHYSICAL CHARACTERISTIC. NAME
+#wasn't regretful that he hadn't VERBed up, but he wondered sometimes what life would be like out of the slums. 
+
+name = "Joseph"
+placename = "NeoEarth"
+country = "neotopia"
+food = "beans"
+relation = "daughter"
+spouse = "Mark"
+verb = "marry"
+emotion = "bittersweet"
+physicalCharacteristic = "old"
+
+print (f"Once upon a time, there was a person named {name}. {name} lived in a dystopian world named {placename}, in a country called {
+country}. \n One day, {
+name} was growing hungry, but he had to save his government-issued {
+food} rations to have a small celebration with his family: \nhis {
+relation} had finally {
+verb}ed a man named {
+spouse}.\n While {
+name} and his family were part of the country's lower class, {
+spouse} was one class above them, which would grant {
+relation} a better life.\n {
+name }was happy for {
+relation}, but he swallowed back a(n) {
+emotion }sob as he thought ofhis {
+relation }growing {
+physicalCharacteristic}. \n{
+name }wasn't regretful that he hadn't {
+verb }ed up, but he wondered sometimes what life would be like out of the slums.")
