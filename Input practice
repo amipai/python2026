@@ -1,0 +1,9 @@
+
+
+code1 = 100
+code2 = 50
+
+total = int(code1) + int(code2)
+finalTotal = total * 2
+
+print (f"{finalTotal}")

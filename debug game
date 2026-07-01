@@ -1,0 +1,8 @@
+playerName = "Amir"
+level = 5
+score = 120
+bonus = 30
+finalScore = score + bonus
+
+Print ("Player Report")
+Print (f"Name :" + playerName)
