@@ -1,0 +1,21 @@
+level = int(input("Enter your level: "))
+hasWeapon = True
+health = int(input("Enter your health: "))
+hasArmor = False
+
+if level >= 10:
+    if hasWeapon:
+        if health > 50:
+           print("You are ready for battle!")
+    else:
+        if hasArmor:
+            print("You need armor or a weapon to fight.")
+        else:
+            if health > 50:
+                print("You are ready for battle!")
+            else:
+                print("You need to heal first.")
+else: 
+    print("You need to level up before you can fight.")
+    
+

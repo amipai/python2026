@@ -1,0 +1,7 @@
+number = 5
+if (number):
+    print("The number is truthy.")
+
+text "hello"
+if (text):
+    print("The text is truthy.")

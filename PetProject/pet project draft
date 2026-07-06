@@ -1,0 +1,384 @@
+import random
+
+
+currentUser = input("enter your name: ")
+print(f"hello, {currentUser}! welcome.")
+print("here are the pets available for adoption:")
+print("elephant cat walrus unicorn")
+print("what pet would you like to adopt?")
+petType = input("enter the pet now.")
+if petType == "elephant":
+    print(f"congratulations, {currentUser}! you have adopted a pet -  🐘.")
+elif petType == "unicorn":
+    print(f"congratulations, {currentUser}! you have adopted a pet -  🦄.")
+elif petType == "walrus":
+    print(f"congratulations, {currentUser}! you have adopted a pet -  🦭.")
+elif petType == "cat":
+    print(f"congratulations, {currentUser}! you have adopted a pet -  🐱.")
+else:
+    print(f"sorry, {currentUser}, that pet is not available for adoption. please try again.")
+
+
+print(f"what would you like to name your {petType}?")
+petName = input("enter the name now.") 
+print(f"your pet's prounouns come in pairs, like she/her. what is the FIRST pronoun in {petName}'s pair?")
+pronoun1 = input("enter the first pronoun now.")
+print(f"what is the SECOND pronoun in {petName}'s pair?")
+pronoun2 = input("enter the second pronoun now.")
+print(f"finally, you need a posessive pronound, like her or his or their. enter it now!")
+pronoun3 = input("enter the posessive pronoun now.")
+print(f"get ready to welcome {petName}! {pronoun3} hatching stats are:")
+
+numFullness = random.randint(50,100)
+print(f"fullness: {numFullness}")
+numHappiness = random.randint(50,100)
+print(f"happiness: {numHappiness}")
+numEnergy = random.randint(50,100)
+print(f"energy: {numEnergy}")
+numHealth = random.randint(50,100)
+print(f"health: {numHealth}")
+numCleanliness = random.randint(50,100)
+print(f"cleanliness: {numCleanliness}")
+
+print("the goal of this game is to keep your pet's stats as high as possible.")
+print("as stats lower, their are various negative consequences.")
+print("for some, the consequences are more severe than others.")
+print(f"for example, if {petName}'s energy stat is low, {pronoun1} will fall asleep...")
+print(f"...but if {pronoun3} health stat reaches zero, {petName} will die.")
+
+stats = {"fullness": numFullness, "happiness": numHappiness, "energy": numEnergy, "health": numHealth, "cleanliness": numCleanliness}
+
+print(f"this is turn 1. you can choose to feed, play, sleep, or groom {petName}.")
+print(f"keep in mind your current stats before you choose your action.")
+print(f"here are your current stats: {stats}")
+print(f"now, what would you like to do? (feed/play/sleep/groom)")
+action1 = input("enter your action now.")
+if action1 == "feed":
+    stats["fullness"] += 10
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    stats["cleanliness"] -= 5
+    print(f"you fed {petName}. {pronoun1} is now less hungry, happier, but a bit less energetic and clean.")
+elif action1 == "play":
+    stats["happiness"] += 10
+    stats["energy"] -= 10
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"you played with {petName}. {pronoun1} is now happier, but a bit hungrier, less energetic, and less clean.")
+elif action1 == "sleep":
+    stats["energy"] += 15
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"{petName} took a nap. {pronoun1} is now more energetic, but a bit hungrier and less clean.")
+elif action1 == "groom":
+    stats["cleanliness"] += 15
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    print(f"you groomed {petName}. {pronoun1} is now cleaner, happier, but a bit less energetic.")
+else:
+    print(f"sorry, {currentUser}, that action is not valid. please try again.")
+
+if numHealth == 0:
+    print("GAME OVER")
+
+if numHealth > 100:
+    numHealth == 100
+if numCleanliness > 100:
+    numCleanliness == 100
+if numEnergy >100:
+    numEnergy == 100
+if numHappiness >100:
+    numHappiness == 100
+if numFullness > 100:
+    numFullness == 100
+
+feeling = range(numHappiness)
+
+if numHappiness >80:
+    {feeling} = "ecstatic"
+elif numHappiness == range(60,79):
+    {feeling} = "happy"
+elif numHappiness == range(40,59):
+    {feeling} = "okay"
+elif numHappiness == range(20,39):
+    {feeling} = "sad"
+elif numHappiness == range(0,19):
+    {feeling} = "awful"
+
+
+print(f"congrats! you've completed turn 1. here are {petName}'s current stats: {stats}. {petName} is feeling {feeling}")
+print(f"in turn 1, you got to know {petName} very well!")
+#i should add some personality to the pet, like personality traits
+print(f"welcome to turn 2! your stats have decreased as your pet aged.")
+stats["fullness"] -= 5
+stats["happiness"] -= 5
+stats["energy"] -= 5
+stats["health"] -= 5
+stats["cleanliness"] -= 5
+print(f"here are your current stats: {stats}")
+print(f"now, what would you like to do? (feed/play/sleep/groom)")
+action2 = input("enter your action now.")
+if action2 == "feed":
+    stats["fullness"] += 10
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    stats["cleanliness"] -= 5
+    print(f"you fed {petName}. {pronoun1} is now less hungry, happier, but a bit less energetic and clean.")
+elif action2 == "play":
+    stats["happiness"] += 10
+    stats["energy"] -= 10
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"you played with {petName}. {pronoun1} is now happier, but a bit hungrier, less energetic, and less clean.")
+elif action2 == "sleep":
+    stats["energy"] += 15
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"{petName} took a nap. {pronoun1} is now more energetic, but a bit hungrier and less clean.")        
+elif action2 == "groom":
+    stats["cleanliness"] += 15
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    print(f"you groomed {petName}. {pronoun1} is now cleaner, happier, but a bit less energetic.")
+else:
+    print(f"sorry, {currentUser}, that's not a valid action. try again.")
+if numHealth == 0:
+    print("GAME OVER")
+
+if numHealth >100:
+    numHealth == 100
+if numCleanliness > 100:
+    numCleanliness == 100
+if numEnergy > 100:
+    numEnergy == 100
+if numHappiness >100:
+    numHappiness == 100
+if numFullness >100:
+    numFullness == 100
+
+if numHappiness >80:
+    feeling == "ecstatic"
+elif numHappiness == range(60,79):
+    feeling = "happy"
+elif numHappiness == range(40,59):
+    feeling = "okay"
+elif numHappiness == range(20,39):
+    feeling = "sad"
+elif numHappiness == range(0,19):
+    feeling = "awful"
+
+print(f"welcome to turn 4! here are your current stats: {stats}")
+print("what would you like to do?")
+action4 = input("enter your action now.")
+if action4 == "feed":
+    stats["fullness"] += 10
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    stats["cleanliness"] -= 5
+    print(f"you fed {petName}. {pronoun1} is now less hungry, happier, but a bit less energetic and clean.")
+elif action4 == "play":
+    stats["happiness"] += 10
+    stats["energy"] -= 10
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"you played with {petName}. {pronoun1} is now happier, but a bit hungrier, less energetic, and less clean.")
+elif action4 == "sleep":
+    stats["energy"] += 15
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"{petName} took a nap. {pronoun1} is now more energetic, but a bit hungrier and less clean.")        
+elif action4 == "groom":
+    stats["cleanliness"] += 15
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    print(f"you groomed {petName}. {pronoun1} is now cleaner, happier, but a bit less energetic.")
+else:
+    print(f"sorry, {currentUser}, that's not a valid action. try again.")
+if numHealth == 0:
+    print("GAME OVER")
+
+if numHealth >100:
+    numHealth == 100
+if numCleanliness >100:
+    numCleanliness == 100
+if numEnergy >100:
+    numEnergy == 100
+if numHappiness >100:
+    numHappiness == 100
+if numFullness >100:
+    numFullness == 100
+
+if numHappiness >80:
+    feeling = "ecstatic"
+elif numHappiness == range(60,79):
+    feeling = "happy"
+elif numHappiness == range(40,59):
+    feeling = "okay"
+elif numHappiness == range(20,39):
+    feeling = "sad"
+elif numHappiness == range(0,19):
+    feeling = "awful"
+
+print(f"welcome to turn 3! here are your current stats: {stats}")
+print("what would you like to do?")
+action3 = input("enter your action now.")
+if action3 == "feed":
+    stats["fullness"] += 10
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    stats["cleanliness"] -= 5
+    print(f"you fed {petName}. {pronoun1} is now less hungry, happier, but a bit less energetic and clean.")
+elif action3 == "play":
+    stats["happiness"] += 10
+    stats["energy"] -= 10
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"you played with {petName}. {pronoun1} is now happier, but a bit hungrier, less energetic, and less clean.")
+elif action3 == "sleep":
+    stats["energy"] += 15
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"{petName} took a nap. {pronoun1} is now more energetic, but a bit hungrier and less clean.")        
+elif action3 == "groom":
+    stats["cleanliness"] += 15
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    print(f"you groomed {petName}. {pronoun1} is now cleaner, happier, but a bit less energetic.")
+else:
+    print(f"sorry, {currentUser}, that's not a valid action. try again.")
+
+if numHealth == 0:
+    print("GAME OVER")
+
+if numHealth >100:
+    numHealth == 100
+if numCleanliness >100:
+    numCleanliness == 100
+if numEnergy >100:
+    numEnergy == 100
+if numHappiness >100:
+    numHappiness == 100
+if numFullness >100:
+    numFullness == 100
+
+if numHappiness >80:
+    feeling = "ecstatic"
+elif numHappiness == range(60,79):
+    feeling = "happy"
+elif numHappiness == range(40,59):
+    feeling = "okay"
+elif numHappiness == range(20,39):
+    feeling = "sad"
+elif numHappiness == range(0,19):
+    feeling = "awful"
+
+print(f"welcome to turn 3! here are your current stats: {stats}")
+print("what would you like to do?")
+action4 = input("enter your action now.")
+if action4 == "feed":
+    stats["fullness"] += 10
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    stats["cleanliness"] -= 5
+    print(f"you fed {petName}. {pronoun1} is now less hungry, happier, but a bit less energetic and clean.")
+elif action4 == "play":
+    stats["happiness"] += 10
+    stats["energy"] -= 10
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"you played with {petName}. {pronoun1} is now happier, but a bit hungrier, less energetic, and less clean.")
+elif action4 == "sleep":
+    stats["energy"] += 15
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"{petName} took a nap. {pronoun1} is now more energetic, but a bit hungrier and less clean.")        
+elif action4 == "groom":
+    stats["cleanliness"] += 15
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    print(f"you groomed {petName}. {pronoun1} is now cleaner, happier, but a bit less energetic.")
+else:
+    print(f"sorry, {currentUser}, that's not a valid action. try again.")
+if numHealth == 0:
+    print("GAME OVER")
+
+if numHealth >100:
+    numHealth == 100
+if numCleanliness >100:
+    numCleanliness == 100
+if numEnergy >100:
+    numEnergy == 100
+if numHappiness >100:
+    numHappiness == 100
+if numFullness >100:
+    numFullness == 100
+
+if numHappiness >80:
+    feeling = "ecstatic"
+elif numHappiness == range(60,79):
+    feeling = "happy"
+elif numHappiness == range(40,59):
+    feeling = "okay"
+elif numHappiness == range(20,39):
+    feeling = "sad"
+elif numHappiness == range(0,19):
+    feeling = "awful"
+
+print(f"welcome to turn 3! here are your current stats: {stats}")
+print("what would you like to do?")
+action5 = input("enter your action now.")
+if action5 == "feed":
+    stats["fullness"] += 10
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    stats["cleanliness"] -= 5
+    print(f"you fed {petName}. {pronoun1} is now less hungry, happier, but a bit less energetic and clean.")
+elif action5 == "play":
+    stats["happiness"] += 10
+    stats["energy"] -= 10
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"you played with {petName}. {pronoun1} is now happier, but a bit hungrier, less energetic, and less clean.")
+elif action5 == "sleep":
+    stats["energy"] += 15
+    stats["fullness"] += 5
+    stats["cleanliness"] -= 5
+    print(f"{petName} took a nap. {pronoun1} is now more energetic, but a bit hungrier and less clean.")        
+elif action5 == "groom":
+    stats["cleanliness"] += 15
+    stats["happiness"] += 5
+    stats["energy"] -= 5
+    print(f"you groomed {petName}. {pronoun1} is now cleaner, happier, but a bit less energetic.")
+else:
+    print(f"sorry, {currentUser}, that's not a valid action. try again.")
+if numHealth == 0:
+    print("GAME OVER")
+
+if numHealth >100:
+    numHealth == 100
+if numCleanliness >100:
+    numCleanliness == 100
+if numEnergy >100:
+    numEnergy == 100
+if numHappiness >100:
+    numHappiness == 100
+if numFullness >100:
+    numFullness == 100
+
+if numHappiness >80:
+    feeling = "ecstatic"
+elif numHappiness == range(60,79):
+    feeling = "happy"
+elif numHappiness == range(40,59):
+    feeling = "okay"
+elif numHappiness == range(20,39):
+    feeling = "sad"
+elif numHappiness == range(0,19):
+    feeling = "awful"
+
+
+
+
+
+
+
