@@ -1,0 +1,27 @@
+#How many hours per day do you spend on the bus?
+#How many hours per day do you spend on the computer at home?
+#How many hours per day do you spend in the car?
+#How many hours per day do you spend on the light rail?
+#How many showers do you take per day?
+#How many hours per day is your AC on?
+#How many hours per day are your lights on?
+
+hoursBus = input("How many hours per day do you spend on the bus? ")
+hoursComputer = input("How many hours per day do you spend on the computer at home? ")
+hoursCar = input("How many hours per day do you spend in the car in these subcategories: electric, hybrid, and gasoline? ")
+hoursLightRail = input("How many hours per day do you spend on the light rail? ")
+showers = input("How many showers do you take per day? ")
+acHours = input("How many hours per day is your AC on? ")
+lightsHours = input("How many hours per day are your lights on? ")
+
+busOutput = float(hoursBus) * 1.6
+computerOutput = float(hoursComputer) * 0.04
+carOutput = float(hoursCar) * 0.9
+lightRailOutput = float(hoursLightRail) * 3
+showerOutput = float(showers) * 2.6
+acOutput = float(acHours) * 2.5
+lightsOutput = float(lightsHours) * 0.05
+
+totalCarbonOutput = busOutput + computerOutput + carOutput + lightRailOutput + showerOutput + acOutput + lightsOutput
+
+print(f"Your total carbon output per day is: {totalCarbonOutput} lbs CO2")1
