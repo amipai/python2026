@@ -1,0 +1,23 @@
+def introduce(first_name, last_name, age):
+    #basic print
+    print("Let's meet our student!")
+
+    #print multiple times
+    print(first_name, "is", age, "years old.")
+
+    #using sep to change space to dashes
+    print(first_name, last_name, sep="-")
+
+    #using sep to remove all spaces
+    print(first_name, "is", age, "years old.", sep="")
+
+    #using end to avoid a new line
+    print("Name:", first_name, end=" ")
+    print(last_name)
+
+    #using string multiplication
+    print(first_name * 2, last_name * 3)
+    print("*" * 20)
+
+#call the function with your own values!
+introduce("Serena", "Strope", 13)

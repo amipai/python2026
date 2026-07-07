@@ -1,0 +1,27 @@
+#def collect_logs(i):
+    #while i < 64:
+        #i += 1
+        #print(f"Chop log; {i}")
+        #if i == 60:
+            #print("Inventory nearly full!")
+
+        
+#collect_logs(0)
+
+def buildReinforcedWall():
+    for x in range(20):
+        x += 1
+
+        print(f"Block placed in {x}")
+
+        if x%4 == 0:
+            print("COBBLESTONE")
+        else:
+            print("PLANK")
+
+        if x%5 == 0:
+            print("Defense checkpoint reached")
+    
+
+buildReinforcedWall()
+
