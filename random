@@ -1,0 +1,34 @@
+import turtle
+
+#Create a screen
+screen = turtle.Screen()
+screen.title("Turtle Screen")
+
+#Create a turntle
+Socrates = turtle.Turtle()
+Socrates.speed(2)
+Socrates.color("pink")
+Socrates.shape("turtle")
+Socrates.turtlesize(2.1)
+
+Socrates.pensize(5)
+Socrates.pencolor("pink")
+
+def drawCurve():
+    for i in range(200):
+        Socrates.right(1)
+        Socrates.forward(1)
+
+Socrates.begin_fill()
+Socrates.left(140)
+Socrates.forward(113)
+drawCurve()
+Socrates.left(120)
+drawCurve()
+Socrates.forward(112)
+Socrates.end_fill()
+
+Socrates.pendown()
+Socrates.forward(150)
+
+screen.mainloop()
