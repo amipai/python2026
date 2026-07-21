@@ -1,0 +1,15 @@
+import random
+import json
+
+unicornName = input("What is your unicorn's name?")
+month = ("January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+day = random.randint(1, 28)
+colorOptions = ("brown", "black", "silver", "gray", "plaid", "leapord print", "neon yellow", "bisexual flag", "polka dot", "striped")
+randomColor = random.choice(colorOptions)
+bodyPartOptions = ("head", "horn", "hoof")
+randomBodyPart = random.choice(bodyPartOptions)
+unicornBirth = random.randint(1, 20)
+
+print(f"Welcome, baby {unicornName}! {unicornName} is a beautiful foal with a {randomColor} coat, {randomColor} hooves, {randomColor} mane and tail, and {randomColor} horn.")
+
+      
