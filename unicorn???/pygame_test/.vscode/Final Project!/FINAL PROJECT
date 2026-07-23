@@ -1,15 +1,20 @@
 import random
-import json
 
 unicornName = input("What is your unicorn's name?")
 month = ("January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 day = random.randint(1, 28)
 colorOptions = ("brown", "black", "silver", "gray", "plaid", "leapord print", "neon yellow", "bisexual flag", "polka dot", "striped")
 randomColor = random.choice(colorOptions)
-bodyPartOptions = ("head", "horn", "hoof")
+bodyPartOptions = ("head", "horn", "hooves")
 randomBodyPart = random.choice(bodyPartOptions)
 unicornBirth = random.randint(1, 20)
 
-print(f"Welcome, baby {unicornName}! {unicornName} is a beautiful foal with a {randomColor} coat, {randomColor} hooves, {randomColor} mane and tail, and {randomColor} horn.")
+print(f"Welcome, baby {unicornName}!\n{unicornName} is a beautiful foal with a {randomColor} coat, {randomColor} hooves,\n{randomColor} mane and tail, and {randomColor} horn.")
 
-      
+if unicornBirth >=10:
+    print(f"It was an easy labor! The {randomBodyPart} came first.")
+else:
+    print("It was a difficult labor, but ultimately a painless one because in unicorn culture, doctors believe their patients.")  
+
+import bouncing_unicorn
+

@@ -1,0 +1,44 @@
+import pygame
+import sys
+
+
+pygame.init()
+
+
+screen = pygame.display.set_mode((200, 200))
+pygame.display.set_caption("unicorn head")
+
+
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+
+
+
+running = True
+
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+
+    screen.fill(WHITE)
+
+    pygame.draw.line(screen, BLUE, (24, 16), (17, 4), 2)
+    pygame.draw.line(screen, BLUE, (17, 4), (15, 3), 2)
+    pygame.draw.line(screen, BLUE, (15, 3), (12, 4), 2)
+    pygame.draw.line(screen, BLUE, (12, 4), (9, 8), 2)
+    pygame.draw.line(screen, BLUE, (9, 8), (10, 9), 2)
+    pygame.draw.line(screen, BLUE, (10, 9), (5, 14), 2)
+    pygame.draw.line(screen, BLUE, (5, 14), (6, 16), 2)
+    pygame.draw.line(screen, BLUE, (6, 16), (9, 17), 2)
+    pygame.draw.line(screen, BLUE, (9, 17), (10, 15), 2)
+    pygame.draw.line(screen, BLUE, (10, 15), (15, 12), 2)
+    pygame.draw.line(screen, BLUE, (15, 12), (16, 18), 2)
+
+   
+    pygame.display.flip()
+
+
+pygame.quit()
+sys.exit()

@@ -1,0 +1,36 @@
+import pygame
+import sys
+
+# Initialize pygame
+pygame.init()
+
+# Set up the display window
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("Drawing Lines in Pygame")
+
+# Define color constants (RGB)
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+GREEN = (0, 255, 0)
+
+# Main game loop
+running = True
+while running:
+    # 1. Event handling loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # 2. Clear the screen with a background color
+    screen.fill(WHITE)
+
+    # 3. Draw the lines here
+    # Draws a blue horizontal line from (100, 300) to (700, 300) with a thickness of 5 pixels
+    pygame.draw.line(screen, BLUE, (-100, 300), (-700, 300), 5)
+
+    # 4. Refresh the screen to display drawings
+    pygame.display.flip()
+
+# Clean quit
+pygame.quit()
+sys.exit()
